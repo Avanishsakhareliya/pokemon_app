@@ -90,7 +90,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({
         const formData = new FormData();
         formData.append('image', data.image);
         
-        const response = await fetch('http://localhost:5000/api/upload', {
+        const response = await fetch('https://pokemon-app-5pv5.onrender.com/api/upload', {
           method: 'POST',
           body: formData,
         });

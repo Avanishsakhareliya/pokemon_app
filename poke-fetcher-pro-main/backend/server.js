@@ -49,6 +49,11 @@ const upload = multer({
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors({
+  origin: "*",
+  credentials: true
+}))
+app.options('*', cors()); 
 
 // Serve static files from the uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

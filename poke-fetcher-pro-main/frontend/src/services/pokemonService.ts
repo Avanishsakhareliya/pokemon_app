@@ -3,7 +3,7 @@ import { toast } from "sonner";
 import axios from 'axios';
 
 // API base URL - updated to point to backend server
-const API_BASE_URL = 'http://localhost:5000/api/pokemon';
+const API_BASE_URL = 'https://pokemon-app-5pv5.onrender.com/api/pokemon';
 
 // Types for our Pokemon data structure
 export interface PokemonAbility {
@@ -48,7 +48,7 @@ export const pokemonService = {
       const formData = new FormData();
       formData.append('image', imageFile);
       
-      const response = await axios.post('http://localhost:5000/api/upload', formData, {
+      const response = await axios.post('https://pokemon-app-5pv5.onrender.com/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
